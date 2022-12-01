@@ -1,15 +1,86 @@
-section div:first-child div{
+section div:first-child .un{
     height: 5px;
     width: 0;
     background-color: red;
     transition: 2s;
+   position: relative;
+    top: 50px;
+    margin-bottom: 200px;
+ 
 }
-section div:first-child .un::before{
+section div:first-child .un::after{
     font-weight:bold ;
     font-size: 30px;
     content: "EXO1";
+    position: absolute;
+    top: -30px;
 }
 
 section div:first-child:hover .un{
-    width: 100px;
+    width: 90px;
+}
+
+
+
+section div .deux{
+    transition: color 2s;
+    position: relative;
+    margin-bottom: 100px;
+}
+section div .deux::after{
+    content: "EXO2";
+    position: relative;
+    bottom: 20px;
+    left: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+    section div .deux:before{
+        width: 100px;
+        height: 5px;
+      content: "";
+      position: absolute;
+      top: 10px;
+      background: red;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 50%;
+      transform-origin: 50%;
+      transition: 1s ;}
+
+      section div .deux:hover:before{
+      transform: scaleX(1);
+      transform: scaleX(1);
+      }
+
+
+
+
+
+section div .trois {
+    display: flex;
+    position: relative;
+    width: 2500px;
+}
+section div .trois::before{
+    position: relative;
+    z-index: 1111;
+    font-weight: bold;
+    font-size: 30px;
+    content: "EXO3";
+}
+section div .trois:after {
+    content: "";
+    position: absolute;
+    width: 4%;
+    transform: scaleY(0);
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.995);
+    transform-origin: bottom;
+    transition:  1s ;
+}
+section div .trois:hover:after {
+    transform: scaleY(1);
+    transform-origin: bottom;
 }
