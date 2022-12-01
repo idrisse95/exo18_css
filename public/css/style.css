@@ -1,8 +1,15 @@
 section div:first-child div{
-    height: 30px;
+    height: 5px;
+    width: 0;
     background-color: red;
+    transition: 2s;
+}
+section div:first-child .un::before{
+    font-weight:bold ;
+    font-size: 30px;
+    content: "EXO1";
 }
 
 section div:first-child:hover .un{
-    width: 300px;
+    width: 100px;
 }
